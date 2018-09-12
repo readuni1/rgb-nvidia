@@ -2,7 +2,7 @@
 # Installs NVIDIA GPU drivers on Ubuntu.
 # Desired version of the driver is passed as parameter.
 #
-class nvidia::ubuntu (Variant[Numeric, Enum['latest',recommended]] $version = 'latest') {
+class nvidia::ubuntu (Variant[Numeric, Enum['latest','recommended']] $version = 'latest') {
   case $version {
     'latest': {
       # Automatically finds the newest nvidia package
