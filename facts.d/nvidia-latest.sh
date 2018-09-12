@@ -25,3 +25,6 @@ for v in $versions; do
 done
 
 echo "nvidia-latest=$newest"			# Prints the name of the package
+
+recommended=$(ubuntu-drivers devices | grep recommended | awk '{print $3}')
+echo "nvidia-recommended=$recommended"

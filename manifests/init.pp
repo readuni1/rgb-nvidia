@@ -30,7 +30,7 @@
 #
 # Copyright 2018 Henriette K. Rohde Garder & Sturla H. Bae, unless otherwise noted.
 #
-class nvidia(Variant[Numeric, Enum['latest']] $version = 'latest') {
+class nvidia(Variant[Numeric, Enum['latest','recommended']] $version = 'latest') {
   $gpu_vendor = $::facts['gpu_vendor']            # Retrieves GPU vendor by looking up PCI vendor ID
   if $gpu_vendor =~ /NVIDIA/ {                    # Checks that a NVIDIA GPU is present
     case $facts['os']['name'] {                   # Retrieves OS name
