@@ -26,5 +26,10 @@ done
 
 echo "nvidia-latest=$newest"			# Prints the name of the package
 
-recommended=$(ubuntu-drivers devices | grep recommended | awk '{print $3}')
+if [ -x /usr/bin/ubuntu-drivers ] ;
+then
+  recommended=$(/usr/bin/ubuntu-drivers devices | grep recommended | awk '{print $3}')
+else
+  recommended="nvidia-${newest}"
+fi
 echo "nvidia-recommended=$recommended"
