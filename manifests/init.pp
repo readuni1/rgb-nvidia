@@ -50,6 +50,6 @@ class nvidia(Variant[Numeric, Enum['latest','recommended']] $version = 'latest')
     }
   }
   else {
-    fail('No NVIDIA GPU detected')
+    #fail('No NVIDIA GPU detected')
   }
 }
