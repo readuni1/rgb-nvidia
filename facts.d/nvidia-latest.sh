@@ -30,7 +30,7 @@ then
 
  if [ -x /usr/bin/ubuntu-drivers ] ;
  then
-  recommended=$(/usr/bin/ubuntu-drivers devices | grep recommended | awk '{print $3}')
+  recommended=$(/usr/bin/ubuntu-drivers devices | grep nvidia | grep recommended | awk '{print $3}')
  else
   recommended="nvidia-${newest}"
  fi
