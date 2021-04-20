@@ -8,14 +8,14 @@ class nvidia::ubuntu (
   case $version {
     'latest': {
       # Automatically finds the newest nvidia package
-      $pkg_name = "nvidia-${::facts['nvidia-latest']}"
+      $pkg_name = "nvidia-driver-${::facts['nvidia-latest']}"
     }
     'recommended': {
       $pkg_name = $::facts['nvidia-recommended']
     }
     default: {
       $nvidia_version = $version
-      $pkg_name = "nvidia-${version}"
+      $pkg_name = "nvidia-driver-${version}"
     }
   }
 
