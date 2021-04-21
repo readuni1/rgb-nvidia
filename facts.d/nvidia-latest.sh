@@ -9,7 +9,7 @@
 
 if [ -d /etc/apt ] ;
 then
- newest = $(apt-cache pkgnames nvidia-driver- | cut -d- -f3 | sort -nr | head -1)
+ newest=$(apt-cache pkgnames nvidia-driver- | cut -d- -f3 | sort -nr | head -1)
 
  echo "nvidia-latest=$newest"			# Prints the name of the package
 
